@@ -1,8 +1,8 @@
 const express = require('express');
 const chalk = require('chalk');
-require('dotenv').config() 
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const methodOverride = require('method-override');
 const postRouters = require('./routes/post-routes');
 const contactRoutes = require('./routes/contact-routes');
@@ -23,7 +23,7 @@ mongoose
 
 
 
-app.listen(process.env.PORT, (error) => {
+app.listen(process.env.PORT || 3000, (error) => {
     error ? console.log(errorMsg(error)) : console.log(successMsg(`Listening port ${process.env.PORT}`));;
 });
 
