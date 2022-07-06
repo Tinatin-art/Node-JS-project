@@ -23,7 +23,7 @@ mongoose
 
 
 
-app.listen(process.env.PORT || 3000, (error) => {
+app.listen(process.env.PORT, (error) => {
     error ? console.log(errorMsg(error)) : console.log(successMsg(`Listening port ${process.env.PORT}`));;
 });
 
